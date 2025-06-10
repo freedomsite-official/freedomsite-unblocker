@@ -15,7 +15,7 @@ const server = http.createServer();
 const bareServer = createBareServer('/seal/');
 const app = express(server);
 const version = packageJson.version;
-const discord = 'https://discord.gg/unblocking';
+const website = 'https://tinyurl.com/freedomsite-v1';
 const routes = [
   { route: '/mastery', file: './static/loader.html' },
   { route: '/apps', file: './static/apps.html' },
@@ -78,7 +78,7 @@ server.on("upgrade", (req, socket, head) => {
 });
 
 server.on('listening', () => {
-  console.log(chalk.bgBlue.white.bold(`  Welcome to Doge V4, user!  `) + '\n');
+  console.log(chalk.bgBlue.white.bold(`  Welcome to Freedomsite V1, user!  `) + '\n');
   console.log(chalk.cyan('-----------------------------------------------'));
   console.log(chalk.green('  🌟 Status: ') + chalk.bold('Active'));
   console.log(chalk.green('  🌍 Port: ') + chalk.bold(chalk.yellow(server.address().port)));
@@ -87,7 +87,7 @@ server.on('listening', () => {
   console.log(chalk.magenta('📦 Version: ') + chalk.bold(version));
   console.log(chalk.magenta('🔗 URL: ') + chalk.underline('http://localhost:' + server.address().port));
   console.log(chalk.cyan('-----------------------------------------------'));
-  console.log(chalk.blue('💬 Discord: ') + chalk.underline(discord));
+  console.log(chalk.blue('🌐 Website: ') + chalk.underline(website));
   console.log(chalk.cyan('-----------------------------------------------'));
 });
 
